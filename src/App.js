@@ -10,7 +10,8 @@ class App extends Component {
   render() {
     return (
       <div className='app'>
-        <Route path="/" component={Landing}/>
+        <Route exact path="/" component={Landing} />
+        <Route path='/fire-map' component={FireMap} />
       </div>
     );
   }
