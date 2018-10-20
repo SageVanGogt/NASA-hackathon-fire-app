@@ -33,7 +33,7 @@ export const MapComponent = withScriptjs(withGoogleMap((
   });
   return (
     <GoogleMap
-      defaultZoom={16}
+      defaultZoom={4}
       center={position}>
       {markers}
     </GoogleMap>

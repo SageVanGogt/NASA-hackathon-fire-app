@@ -1,5 +1,5 @@
-import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import React from 'react'
+import { Link } from 'react-router-dom'
 import styled from 'styled-components';
 import img from '../assets/wildfire.jpg';
 
@@ -43,7 +43,7 @@ const Button = styled.button`
 const Landing = () => {
   return (
     <LandingPage>
-      <Title className='app-title'>FIRE!!!</Title>
+      <Title className='app-title'>SPOTIFIRE</Title>
       <Link to='/report'><Button>Report a Fire</Button></Link>
       <Link to='fire-map'><Button>Find a Fire</Button></Link>
     </LandingPage>
