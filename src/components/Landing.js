@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 import img from '../assets/wildfire.jpg';
 
 
 const LandingPage = styled.div`
-box-sizing: border-box;
+  box-sizing: border-box;
   width: 100%;
   height: 100vh;
   margin: 0;
@@ -16,6 +17,7 @@ box-sizing: border-box;
   background-image: url(${img});
   background-repeat: no-repeat;
   background-size: cover;
+  opacity: 0.9
 `
 
 const Title = styled.h1`
@@ -33,15 +35,17 @@ const Button = styled.button`
   color: #A8AFB5;
   font-family: 'Orbitron', sans-serif;
   font-size: 40px;
+  text-decoration: none;
   cursor: pointer;
+  outline: none;
 `
 
 const Landing = () => {
   return (
     <LandingPage>
       <Title className='app-title'>FIRE!!!</Title>
-      <Button>Report a Fire</Button>
-      <Button>Find a Fire</Button>
+      <Link to='/report'><Button>Report a Fire</Button></Link>
+      <Link to='fire-map'><Button>Find a Fire</Button></Link>
     </LandingPage>
   )
 
