@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Link } from "react-router-dom";
+import Landing from './components/Landing';
+import styled from 'styled-components';
 import './App.css';
 
 const Page = ({ title }) => (
@@ -37,6 +39,7 @@ class App extends Component {
   render() {
     return (
       <div className='app'>
+        <Landing />
         <Route path="/" component={Home}/>
         <Route path="/about" component={About}/>
         <Route path="/settings" component={Settings}/>
