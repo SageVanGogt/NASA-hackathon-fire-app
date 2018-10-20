@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
-import { Router, browserHistory, Route, Link } from 'react-router';
-import logo from './logo.svg';
+import { Route, Link } from "react-router-dom";
 import './App.css';
 
 const Page = ({ title }) => (
     <div className="App">
       <div className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>{title}</h2>
       </div>
       <p className="App-intro">
         This is the {title} page.
@@ -39,14 +36,13 @@ const Settings = (props) => (
 class App extends Component {
   render() {
     return (
-      <Router history={browserHistory}>
+      <div className='app'>
         <Route path="/" component={Home}/>
         <Route path="/about" component={About}/>
         <Route path="/settings" component={Settings}/>
-      </Router>
+      </div>
     );
   }
 }
 
 export default App;
-x
