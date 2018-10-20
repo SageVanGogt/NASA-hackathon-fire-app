@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { mapKey } from './../../apiKeys';
 import MapComponent from '../../components/MapComponent/MapComponent';
+import './MapContainer.css'
 
 const mapUrl = `https://maps.googleapis.com/maps/api/js?key=${mapKey}&v=3.exp&libraries=geometry,drawing,places`;
 
