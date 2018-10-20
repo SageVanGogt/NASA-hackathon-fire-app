@@ -9,8 +9,8 @@ export class MapContainer extends Component {
     super(props);
   }
 
-  toggleShowing = (pickup) => {
-    this.props.toggleShowing(pickup);
+  toggleShowing = (fireInfo) => {
+    this.props.toggleShowing(fireInfo);
   };
 
   containerElement = () => (<div className="availableRidesMap"/>);
@@ -26,8 +26,8 @@ export class MapContainer extends Component {
             <MapComponent
               position={this.props.currentLocation}
               googleMapURL={mapUrl}
-              rides={this.props.rides}
-              markerCoords={this.props.pickupLocations}
+              // fires={this.props.fires}
+              markerCoords={this.props.fireLocations}
               toggleShowing={this.toggleShowing}
               loadingElement={this.loadingElement()}
               containerElement={this.containerElement()}

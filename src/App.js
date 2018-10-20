@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Route, Link } from "react-router-dom";
+import { FireMap } from './components/FireMap/FireMap.jsx';
 import './App.css';
 import ImageUpload from './components/ImageUpload/ImageUpload';
 
@@ -19,6 +20,9 @@ const Page = ({ title }) => (
       <p>
         <Link to="/settings">Settings</Link>
       </p>
+      <p>
+        <Link to="/firesnearme">Settings</Link>
+      </p>
     </div>
 );
 
@@ -34,6 +38,10 @@ const Settings = (props) => (
   <Page title="Settings"/>
 );
 
+// const FireMap = (props) => (
+//   <Page title="MapContainer"/>
+// );
+
 class App extends Component {
   render() {
     return (
@@ -41,6 +49,7 @@ class App extends Component {
         <Route path="/" component={Home}/>
         <Route path="/about" component={About}/>
         <Route path="/settings" component={Settings}/>
+        <Route path="/firesnearme" component={FireMap} />
       </div>
     );
   }
