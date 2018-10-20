@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
 
+
+
 const Landing = () => {
   return (
-    <div>
+    <div className='landing'>
       <h1>FIRE!!!</h1>
       <button>Report a Fire</button>
       <button>Find a Fire</button>
