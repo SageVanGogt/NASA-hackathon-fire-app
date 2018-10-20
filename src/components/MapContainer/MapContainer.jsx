@@ -21,7 +21,24 @@ export class MapContainer extends Component {
   render() {
     return (
       <div className="map-container">
-        
+        {
+          this.props.currentLocation.lat ? 
+            <MapComponent
+              position={this.props.currentLocation}
+              googleMapURL={mapUrl}
+              rides={this.props.rides}
+              markerCoords={this.props.pickupLocations}
+              toggleShowing={this.toggleShowing}
+              loadingElement={this.loadingElement()}
+              containerElement={this.containerElement()}
+              mapElement={this.mapElement()} /> :
+            <div className="map-instructions">
+              <h4 className="map-text">
+                Input your current address to find pickup pickup
+                locations near you
+              </h4>
+            </div>
+        }
       </div>
     );
   }
