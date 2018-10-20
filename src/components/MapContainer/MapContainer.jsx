@@ -9,6 +9,14 @@ export class MapContainer extends Component {
     super(props);
   }
 
+  toggleShowing = (pickup) => {
+    this.props.toggleShowing(pickup);
+  };
+
+  containerElement = () => (<div className="availableRidesMap"/>);
+  
+  loadingElement = () => (<div style={{ height: `100%` }}/>);
+  mapElement = () => (<div style={{ height: `100%` }} />);
 
   render() {
     return (
