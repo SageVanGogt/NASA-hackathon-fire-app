@@ -1,15 +1,25 @@
 import React, { Component } from 'react';
+import EXIF from 'exif-js';
 
 class ImageUpload extends Component {
   constructor() {
     super();
     this.state = {
-      image: null
+      image: null,
+      lat: null,
+      lng: null
     }
   }
 
-  updateImage = () => {
-    
+
+  updateImage = (event) => {
+    const image = event.target.files[0]
+    EXIF.getData(image, function()   {
+      const lat = EXIF.getTag(this, "GPSLatitude");
+      const lng = EXIF.getTag(this, "GPSLongitude");
+      console.log(lat)
+      console.log(lng)
+    })
   }
 
   render() {
