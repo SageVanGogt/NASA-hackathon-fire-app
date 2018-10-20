@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Route, Link } from "react-router-dom";
 import './App.css';
+import ImageUpload from './components/ImageUpload/ImageUpload';
 
 const Page = ({ title }) => (
     <div className="App">
