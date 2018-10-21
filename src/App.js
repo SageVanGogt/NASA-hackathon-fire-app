@@ -11,13 +11,9 @@ class App extends Component {
   render() {
     return (
       <div className='app'>
-<<<<<<< HEAD
         <Route exact path="/" component={Landing} />
         <Route path='/fire-map' component={FireMap} />
-=======
-        <Route exact path="/" component={Landing}/>
         <Route path="/ReportedFire" component={InTheEventOfAFire}/>
->>>>>>> Change route for instructional page
       </div>
     );
   }
